@@ -1,0 +1,270 @@
+:root {
+    --textColor: rgb(249, 249, 249);
+    --validateGreen: rgb(41, 223, 41);
+    --buttonGreen: rgb(7, 157, 7);
+    --blueGreyBg: rgb(69, 69, 98);
+    --blueGreyFooter: rgb(48, 48, 106);
+    --validateGrey: rgb(97, 97, 126);
+    --purpleShade: rgb(93, 56, 130);
+    --purple: rgb(134, 80, 188);
+    --fadeGreen: rgba(26, 87, 37, 0.606);
+    --Yelow: rgb(243, 215, 3);
+
+}
+
+@font-face {
+    font-family: 'sk_femme_fataleregular';
+    src: url('sk_femme_fatale_regular-webfont.woff2') format('woff2'),
+        url('sk_femme_fatale_regular-webfont.woff') format('woff'),
+        url('sk_Femme_fatale_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--textColor);
+    background-image: url("images/bgMobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+h1 {
+    font-family: 'sk_femme_fataleregular';
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 29px 10px 1px rgba(255, 255, 255, 0.201);
+}
+
+h3 {
+    text-align: center;
+}
+
+
+
+/* MOBILE FIRST */
+
+/* CONNEXION */
+
+
+#mainConnexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+input {
+    border-radius: 30px;
+    padding: 10px;
+    width: 90vw;
+    max-width: 600px;
+    font-size: 13px;
+    border: none;
+    background-color: var(--blueGreyBg);
+    color: var(--textColor);
+}
+
+#connexionForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* INSCRIPTION */
+
+
+
+/* LABELS */ 
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/* border: 0; supprime toute bordure de l'élément. C'est utile pour s'assurer que la bordure ne contribue pas à l'espace
+ occupé par l'élément sur la page. */
+ /* clip: rect(0 0 0 0); est une ancienne propriété CSS qui est utilisée pour couper un élément absolument positionné.
+  Dans ce cas, il coupe l'élément en une forme rectangulaire avec une hauteur et une largeur de 0, ce qui rend l'élément
+ invisible. */
+ /* height: 1px; définit la hauteur de l'élément à 1px. Comme l'élément est coupé à une hauteur de 0, cette propriété
+  n'a pas d'effet visuel, mais elle permet de s'assurer que l'élément n'est pas complètement supprimé du flux de la page. */
+  /* margin: -1px; donne à l'élément une marge négative de 1px sur tous les côtés. Cela déplace l'élément hors de l'écran,
+   le rendant invisible. */
+/* overflow: hidden; est utilisé pour s'assurer que tout contenu supplémentaire qui dépasse les dimensions de l'élément
+ (dans ce cas, 1px par 1px) est caché et n'apparaît pas sur la page. */
+ /* padding: 0; supprime tout l'espace de remplissage autour du contenu de l'élément. Comme pour la propriété border, 
+ cela sert à s'assurer que le rembourrage ne contribue pas à l'espace occupé par l'élément sur la page. */
+ /* position: absolute; positionne l'élément de manière absolue par rapport à son conteneur le plus proche avec une 
+ position non statique, ou, s'il n'y en a pas, par rapport au document lui-même. Cela signifie que l'élément est retiré 
+ du flux normal du document et n'affecte pas la position des autres éléments. */
+ /* width: 1px; définit la largeur de l'élément à 1px. Comme pour la hauteur, cette propriété n'a pas d'effet visuel 
+ en raison de la propriété clip, mais elle assure que l'élément n'est pas complètement supprimé du flux de la page. */
+
+
+
+/* HEADER */
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--purpleShade), rgb(45, 35, 90));
+    position: sticky;
+    top: 0;
+    height: 80px;
+}
+
+header>div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* ANIMATION RULES */
+
+
+.rules {
+    padding: 20px;
+    width: 60vw;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    border: 1px solid white;
+    border-radius: 5%;
+    background-color: rgba(65, 58, 122, 0.928);
+    text-align: justify;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.rules.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+header button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 10px;
+}
+
+header button:hover {
+    border: 1px solid var(--Yelow);
+    color: var(--Yelow);
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+
+/* BOUTONS CONNEXION - INSCRIPTION */
+
+.btnSubmit {
+    border-radius: 15px;
+    text-align: center;
+    padding: 7px 15px;
+    background-color: var(--buttonGreen);
+    border: none;
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+.btnSubmit:hover {
+    background-color: var(--validateGreen);
+}
+
+#sign_up {
+    background-color: var(--purpleShade);
+}
+
+#sign_up:hover {
+    background-color: var(--purple);
+}
+
+.ButtonSubmitDiv{
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid rgb(77, 77, 120);
+    background-color: var(--blueGreyFooter);
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.061);
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+}
+
+footer>div>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+footer>div>a>p {
+    font-size: 10px;
+    line-height: 0px;
+}
+
+
+
+/* MEDIA QUERIES DESKTOP */
+
+@media (min-width: 550px) {
+
+    body {
+        background-image: url("images/bgDesktop.jpg");
+    }
+
+    .choix {
+        font-size: 15px;
+    }
+
+    #mainIndex {
+        flex-direction: row;
+    }
+
+}
